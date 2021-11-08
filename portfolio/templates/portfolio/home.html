@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello this is Abdur RAzzak , Welcoe to my sie</h1>
-    {% for project in projects %}
-    <h1>{{ project.title }}</h1>
-    <p>{{ project.description }}</p>
-    <img src="{{ project.image.url }}"height = 100 width = 100><br>
-    {% if project.url %}
-    <a href="{{ project.url }}">{{ project.title }}</a>
-    {% endif %}
-    {% endfor %}
-</body>
-</html>
+{% load static %}
+<img src="{% static 'portfolio/243561821_1011273306114730_808639990406022995_n.jpg' %}" alt="">
+<a href="{% static 'portfolio/Abdur-Razzak-CV.pdf' %}">Resume</a>
+<h1>Hello this is Abdur Razzak , Welcoe to my sie</h1>
+{% for project in projects %}
+<h1>{{ project.title }}</h1>
+<p>{{ project.description }}</p>
+<img src="{{ project.image.url }}" height= 100 width= 100><br>
+{% if project.url %}
+<a href="{{ project.url }}">{{ project.title }}</a>
+{% endif %}
+{% endfor %}
