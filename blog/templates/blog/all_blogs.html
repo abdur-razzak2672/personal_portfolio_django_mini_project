@@ -10,7 +10,7 @@
     <h1>Welcome to blog</h1>
     <p>Hello this is Abdur Razzak Welcome to my site</p>
     {% for blog in blogs %}
-    <h1>{{ blog.title }}</h1>
+    <a href="{% url 'blog:blog_detail' blog.id %}"><h1>{{ blog.title }}</h1></a>
     <h2>{{ blog.date }}</h2>
     <p>{{ blog.description }}</p>
     {% endfor %}
