@@ -1,0 +1,15 @@
+.col-md-6 h1{
+    color: goldenrod ;
+}
+.col-md-6 span{
+    color: crimson ;
+}
+
+.text-center{
+    color: darkgreen;
+    font-weight: 800;
+}
+.card-title{
+    color: olive;
+}
+ 

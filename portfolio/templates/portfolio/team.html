@@ -1,0 +1,23 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+{% load static %}
+<section class="container mt-5">
+    <h1 class="text-center">My Teams </h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+        {% for project in projects %}
+        <div class="col">
+            <div class="card h-100">
+                <img style="border-radius: 100%;" src="{{ project.image.url }}" height="300" class="card-img-top p-sm-5"  >
+                <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                {% if project.url %}
+                <h6><a  href="{{ project.url }}">Show Details...</a></h6>
+                {% endif %}
+                </div>    
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

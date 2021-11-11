@@ -1,8 +1,15 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h1>{{ all_blog.title }}</h1>
-{{ all_blog.date }}<br>
-{{ all_blog.description }}<br>
+<section class="container mt-5 ">
+    <h1 class="text-center">WelCome To My Blog</h1>
+
+    <div class="text-center mt-5 card h-100">
+        <h1>{{ all_blog.title }}</h1>
+        <div class="text-center">
+            <h5 class="card-title">{{ all_blog.date}}</h5>
+            <p class="card-text">{{ all_blog.description }}</p>
+        </div>
+    </div>
+</section>
 {% endblock %}
- 

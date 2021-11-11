@@ -1,0 +1,22 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+{% load static %}
+<section class="container mt-5">
+    <h1 class="text-center">About Me</h1>
+    <div class="row p-3">
+        <div class="col-md-6 mt-5">
+            <img class="float-start rounded-3" src="{% static 'portfolio/243561821_1011273306114730_808639990406022995_n.jpg' %}" height="300" width="350" alt="">
+        </div>
+        <div class="col-md-6 mt-5">
+            <h1 class="text-uppercase penguins">I Am Programmer</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Necessitatibus veritatis quibusdam vero nemo nobis autem
+            quisquam
+            quas repellat facilis expedita quaerat explicabo illo porro,
+            tempora, voluptatibus doloribus, ducimus esse. Accusamus?</p>
+            <button class="btn btn-info text-white"><a style="text-decoration: none; color: white;" href="{% static 'portfolio/Abdur Razzak cv.pdf' %}">Download Resume</a></button>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

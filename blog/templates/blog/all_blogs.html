@@ -1,12 +1,21 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h2>Razzak has Written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
-<h1>Welcome to blog</h1>
-<p>Hello this is Abdur Razzak Welcome to my site</p>
-{% for blog in blogs %}
-<a href="{% url 'blog:blog_detail' blog.id %}"><h1>{{ blog.title }}</h1></a>
-<h2>{{ blog.date|date:'M d Y' }}</h2>
-<p>{{ blog.description }}</p>
-{% endfor %}
+
+<section class="container mt-5">
+    <h1 class="text-center">Razzak has Written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 text-center">
+        {% for blog in blogs %}
+        <div class="col">
+            <div class="card h-100">
+                <a style="text-decoration: none;" href="{% url 'blog:blog_detail' blog.id %}"><h1>{{ blog.title }}</h1></a>
+                <div class="card-body">
+                <h5 class="card-title">{{ blog.date|date:'M d Y' }}</h5>
+                <p class="card-text">{{ blog.description }}</p>
+                </div>    
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
