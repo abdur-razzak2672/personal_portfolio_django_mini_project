@@ -2,14 +2,26 @@
     color: goldenrod ;
 }
 .col-md-6 span{
-    color: crimson ;
+    color: goldenrod ;
 }
 
 .text-center{
-    color: darkgreen;
+    color: rgb(228, 7, 7);
     font-weight: 800;
 }
 .card-title{
     color: olive;
+}
+
+@media (max-width : 992px) {
+    .razzak-left{
+        width: 100%;
+    }
+     
+    
+}
+@media (max-width : 668px) {
+   
+    
 }
  
